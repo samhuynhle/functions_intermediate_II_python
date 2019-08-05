@@ -70,8 +70,14 @@ dojo = {
    'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
 def printInfo(some_dict):
-    for some_key in some_dict.values():
-        print(len(some_key))
-        for some_value in some_key:
+    for some_key in some_dict:
+        print(len(some_dict[some_key]))
+        for some_value in some_dict[some_key]:
             print(some_value)
 printInfo(dojo)
+
+# function printInfo has one defined paramater, some_dict, which will take a dictionary in as an argument.
+# We are passing in the dictionary, dojo, into the function printInfo().
+# The first for loop in function printInfo will pull the key's of the dictionary, dojo.
+# Within every loop, the code is printing the length of the list, which is the value of the key.
+# Wtithin every loop, there is a nest for loop, which will print the values of the list.
